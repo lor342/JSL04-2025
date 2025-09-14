@@ -77,6 +77,8 @@
 
   <dialog id="taskDialog">
     <form method="dialog" class="dialog-form">
+        <span id="closeDialog" style="position:absolute;top:10px;right:15px;cursor:pointer;font-size:2em;color:red;" onclick="dialog.close()";>&times;</span>
+        
         <h2 class="add-task">Add New Task</h2>
         <label for="task-title">Title:</label>
         <input type="text" id="task-title" name="task-title" value="" required>
@@ -91,9 +93,8 @@
             <option value="done">done</option>
         </select>
     
-        <div class="dialog-buttons">
-            <button type="submit" class="submit-button">Add Task</button>
-            <button type="button" class="cancel-button" id="cancelButton">Cancel</button>
+        <div>
+            <button type="button" class="cancel-button" id="cancelButton" >Cancel</button>
         </div>
     </form>
   </dialog>

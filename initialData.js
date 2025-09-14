@@ -54,6 +54,14 @@ todoTasks.forEach(element => {
   document.querySelector(".tasks-todo").appendChild(div);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const closeIcon = document.getElementById("closeDialog");
+  const dialog = document.getElementById("taskDialog");
+  if (closeIcon && dialog) {
+    closeIcon.onclick = () => dialog.close();
+  }
+});
+
 
 function displayModal(taskId) {
   // find taskId in initialTasks
@@ -68,8 +76,6 @@ function displayModal(taskId) {
   descInput.value = task.description;
   let statusSelect = dialog.querySelector('select[name="task-status"]');
   statusSelect.value = task.status;
-  // dialog.querySelector("task-description").innerHTML = task.description;
-  // dialog.querySelector("task-status").innerHTML = task.status;
 
   dialog.showModal();
 }
