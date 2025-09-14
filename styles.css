@@ -1,0 +1,167 @@
+body {
+    background-color: #F4F7FD;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #FFFFFF;
+    height: 100vh;
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #E4EBFA;
+}
+
+.sidebar h4 {
+    font-family: Plus Jakarta Sans;
+    margin-left: 20%;
+    margin-top: 10%;
+    color: #828FA3;
+}
+
+.logo {
+    width: 50%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.logo-small {
+    display: none; /* logo hidden on larger screens */
+}
+
+button {
+    font-family: Plus Jakarta Sans;
+    color: #FFFFFF; 
+    font-size: 20px;
+    background-color: #635FC7;
+    padding: 15px 20px;
+    border-top-right-radius: 15px;  
+    border-bottom-right-radius: 15px;
+    max-width: 80%;
+    border: none;
+}
+
+.header-main {
+    display: flex; /* flexbox for everything excluding sidebar */
+    flex-direction: column;
+    
+}
+.header {
+    background-color: #FFFFFF;
+    font-family: Plus Jakarta Sans;
+    width: 83.9vw;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #E4EBFA;
+}
+
+.header h2 {
+    margin-left: 15px;
+}
+.columns {
+    display: flex;
+    margin-left: 15px;
+    font-family: Plus Jakarta Sans;
+    gap: 10px;
+}
+
+.todo {
+    display: flex;
+    gap: 10px;
+    color: #828FA3;
+}
+
+.doing {
+    display: flex;
+    gap: 15px;
+    color: #828FA3;
+}
+
+.done {
+    display: flex;
+    gap: 10px;
+    color: #828FA3;
+}
+
+.circle-1 {
+  width: 20px;
+  height: 20px;
+  background-color: #26d1f0;   
+  border-radius: 50%;      
+  display: inline-block;
+}
+
+.circle-2 {
+  width: 20px;
+  height: 20px;
+  background-color: #8825cf;   
+  border-radius: 50%;      
+  display: inline-block;
+}
+
+.circle-3 {
+  width: 20px;
+  height: 20px;
+  background-color: #27d989;   
+  border-radius: 50%;      
+  display: inline-block;
+}
+
+.tasks-todo, .tasks-doing, .tasks-done {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.task {
+    background-color: #FFFFFF;
+    font-weight: bold;
+    flex: 1;               
+    padding: 10px 20px;     
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15)
+
+}
+
+@media (max-width: 700px) {
+    button {
+        font-size: 10px; /* to make button contain on shrinking screen */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        width: 95vw; /* to make header fit snugg on smaller screens */
+    }
+}
+
+
+@media (max-width: 425px) {
+  .sidebar {
+    display: none;
+  }
+  .columns {
+    flex-direction: column;
+    margin-right: 15px;
+  }
+  .header {
+    width: 100vw;
+  }
+  .launch-career {
+    display: none;
+  }
+  .logo-small {
+    display: block;
+    width: 60vw;
+    height: auto;
+    margin-left: 10px;
+  }
+}

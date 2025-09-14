@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script defer src="./initialData.js"></script>
+  </head>
+
+  <body>
+   
+    <container class="container">
+    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+        <nav>
+            <div class="sidebar">
+                <img src="logo-light.svg" alt="logo" class="logo"/> 
+                <h4>ALL BOARDS (1)</h4>
+                <button>Launch Career</button>
+            </div>
+        </nav>
+
+    <div class="header-main">
+    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
+        <div class="header">
+            <header>
+                <div>
+                    <img src="logo-light.svg" alt="logo" class="logo-small"/>
+                    <h2 class="launch-career">Launch Career</h2>
+                </div>
+            </header>
+        </div>
+
+        <div>
+            <main class="columns">
+            <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
+                <div>
+                    <div>                    
+                        <h4 class="todo"><span class="circle-1"></span>TODO (2)</h4>
+                    </div>
+                    <!-- Tasks container for TODO -->
+                    <div class="tasks-todo">
+                        <!-- <div class="task" onclick="displayModal(1)">Launch Epic Career 🚀</div>
+                        <div class="task">Learn Data Structures and Algorithms 📚</div>
+                        <div class="task">Crush Frameworks 🖼️</div> -->
+                    </div>
+                </div>
+                <!-- DOING Column -->
+                <div>
+                    <div>                    
+                        <h4 class="doing"><span class="circle-2"></span>DOING (2)</h4>
+                    </div>
+                    <!-- Tasks container for DOING -->
+                    <div class="tasks-doing">
+                        <div class="task">Master JavaScript 💛</div>
+                        <div class="task">Keep on Going 🏆</div>
+                        <div class="task">Understand Databases ⚙️</div>
+                    </div>
+                </div>
+                <!-- DONE Column -->
+                <div>
+                    <div> 
+                        <h4 class="done"><span class="circle-3"></span>DONE (2)</h4>
+                    </div>
+                    <!-- Tasks container for DONE -->
+                    <div class="tasks-done">
+                        <div class="task">Contribute to Open Source Projects 🌐</div>
+                        <div class="task">Build Portfolio Projects 🛠️</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    </container>
+  </body>
+
+  <dialog id="taskDialog">
+    <form method="dialog" class="dialog-form">
+        <h2 class="add-task">Add New Task</h2>
+        <label for="task-title">Title:</label>
+        <input type="text" id="task-title" name="task-title" value="" required>
+    
+        <label for="task-description">Description:</label>
+        <textarea id="task-description" name="task-description" value="" rows="4"></textarea>
+    
+        <label for="task-status">Status:</label>
+        <select id="task-status" name="task-status">
+            <option value="todo" selected>todo</option>
+            <option value="doing">doing</option>
+            <option value="done">done</option>
+        </select>
+    
+        <div class="dialog-buttons">
+            <button type="submit" class="submit-button">Add Task</button>
+            <button type="button" class="cancel-button" id="cancelButton">Cancel</button>
+        </div>
+    </form>
+  </dialog>
+</html>
