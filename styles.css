@@ -117,7 +117,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
 }
 
 .task {
@@ -128,7 +127,32 @@ button {
     border: none;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15)
+}
 
+#taskDialog {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 8px;
+    width: 30%;
+    height: 40%;
+    font-family: Plus Jakarta Sans;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+} 
+
+#taskDialog:not([open]) {
+    display: none;
+}
+
+#taskDescription {
+    resize: none;
+    height: 50%;
+}
+
+dialog::backdrop {
+  background-color: rgba(128, 128, 128, 0.7); /* Grey with 70% opacity */
 }
 
 @media (max-width: 700px) {
@@ -164,8 +188,8 @@ button {
     height: auto;
     margin-left: 10px;
   }
-}
-
-dialog::backdrop {
-  background-color: rgba(128, 128, 128, 0.7); /* Grey with 70% opacity */
+  #taskDialog {
+    width: 75%;
+    height: 50%;
+  }
 }
